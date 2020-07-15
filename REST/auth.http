@@ -1,0 +1,31 @@
+### Variables
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1Y2Q2ODMxZjFhY2I0ZjBiNjkxYzRlZjYiLCJpYXQiOjE1NTc1NjIxNDMsImV4cCI6MTU1NzkyMjE0M30.BP7n27AVY9MKTz1ViHMJWOVqQGMktJmT8AJWrZuQoP0
+@login = { "email": "hello@email.com", "password": "password" }
+@login = { "email": "test@email.com", "password": "mymango"}
+
+### Get authenticated user given the token
+GET  http://localhost:3000/api/auth/user
+x-auth-token: {{token}}
+
+
+### Login user and get token
+POST  http://localhost:3000/api/auth/login
+content-type: application/json
+
+{{login}}
+
+### Variables
+@user = {
+  "firstName": "Shafaat",
+  "lastName": "Hussain",
+  "email": "sshabdali@hotmail.com",
+  "username": "sshabdali",
+  "password": "nav33d77",
+  "type": "admin"
+}
+
+### Register user given their email and password, returns the token upon successful registration
+POST  http://localhost:3000/api/auth/register
+content-type: application/json
+
+{{user}}
