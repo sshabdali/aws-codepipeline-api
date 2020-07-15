@@ -6,7 +6,7 @@ import * as _ from "lodash";
 
 import Payload from "../types/Payload";
 import Request from "../types/Request";
-import User from "../models/User";
+import User from "../models/user";
 
 export class AuthController {
 

@@ -1,7 +1,7 @@
 import { Response } from 'express';
 import * as HttpStatusCodes from "http-status-codes";
 import Request from "../types/Request";
-import Product from "../models/Product";
+import Product from "../models/product";
 
 export class ProductController {
 
