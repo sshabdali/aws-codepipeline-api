@@ -11,4 +11,5 @@ const baseUrl = `http://${HOST}:${PORT}`;
 app.listen(PORT, () => {
   // tslint:disable-next-line:no-console
     console.log(`AWS basic API server running at '${baseUrl}'`);
+    console.log(`Mongodb Connection is '${conf.MongodbConnection}'`);
 })
